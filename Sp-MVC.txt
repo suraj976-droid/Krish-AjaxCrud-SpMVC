@@ -1,0 +1,53 @@
+SELECT TOP (1000) [Sid]
+      ,[SName]
+      ,[Scourse]
+      ,[Sfees]
+  FROM [janbatchcoreSPMVC].[dbo].[students]
+
+ create proc InsertStudent
+ @Sname varchar(100),
+ @Scourse varchar(100),
+ @Sfees decimal(9,2)
+ as
+ begin
+	insert into students values(@Sname,@Scourse,@Sfees);
+end
+
+create proc FetchStudents
+as
+begin
+	Select * from students;
+end
+
+create proc DeleteStudents
+@sid int
+as
+begin
+  delete from students where Sid=@sid;
+end
+
+create proc FindStudentById
+@sid int
+as
+begin
+  Select * from students where Sid=@sid;
+end
+
+Exec FindStudentById '2'
+
+create proc InsertOrUpdate
+@Sid int,
+@SName Varchar(100),
+@Scourse Varchar(100), 
+@Sfees decimal(9,2)
+as
+begin
+  if (@Sid > 0)
+		begin
+	update students set SName = @SName, Scourse = @Scourse, Sfees= @Sfees Where Sid = @Sid;
+		end
+		else
+		begin
+		insert into students Values (@SName,@Scourse,@Sfees);
+		end
+end
