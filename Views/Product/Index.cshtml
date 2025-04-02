@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<Product>
+
+<a asp-controller="Product" asp-action="AddProduct" class="btn btn-primary">Add Product</a>
+<br /><br />
+
+<form method="post">
+    <input type="text" name="srch" placeholder="search here..." />
+    Select Range 
+    <select>
+        <option>High to Low</option>
+        <option>Low to High</option>
+    </select>
+
+    No.of Entry 
+    <select>
+        <option>5</option>
+        <option>10</option>
+        <option>25</option>
+        <option>50</option>
+    </select>
+    <input type="submit" />
+</form>
+
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Category</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var d in Model)
+        {
+            <tr>
+                <th scope="row">@d.Pid</th>
+                <td>@d.Pname</td>
+                <td>@d.Pcat</td>
+                <td>@d.Price</td>
+                <td><a onclick="return confirm('Are you sure to delete this record?')" asp-controller="Product" asp-action="DelProd" asp-route-id="@d.Pid" class="btn btn-sm btn-danger">Delete</a></td>
+            </tr>
+        }
+        
+
+    </tbody>
+</table>

@@ -1,0 +1,13 @@
+﻿@model Student
+
+<form method="post">
+    <input type="hidden" asp-for="Sid" />
+	Name <input type="text" class="form-control" asp-for="SName" /> <br />
+
+	Course <input type="text" class="form-control" asp-for="Scourse" /> <br />
+
+	Fees <input type="text" class="form-control" asp-for="Sfees" /> <br />
+
+	<input type="submit" value="Save" class="btn btn-primary" />
+
+</form>

@@ -1,0 +1,69 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<a class="btn btn-primary" id="btnmodal">Add Product</a>
+
+<input type="text" class="form-control" id="txt" placeholder="Search here..."/>
+No.of Entries <select id="noentry">
+                <option>2</option>
+                <option>3</option>
+                <option>5</option>
+            </select>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">PName</th>
+            <th scope="col">Pcat</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody id="mydata">
+        
+    </tbody>
+</table>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" id="myform">
+                    <input type="hidden" id="Pid" name="Pid"/>
+                    PName <input type="text" class="form-control" name="Pname" id="Pname" /><br />
+                    Pcat <select class="form-control" name="Pcat" id="Pcat">
+                        <option>Electronics</option>
+                        <option>Foods</option>
+                        <option>Cloths</option>
+
+                    </select><br />
+
+                    Price <input type="text" class="form-control" name="Price" id="Price" /><br />
+                    <input type="button" class="btn btn-secondary" value="Add" id="submitbtn"/>
+                    <input type="button" class="btn btn-secondary" value="Update" id="updbtn" />    
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/javascript.js"></script>
