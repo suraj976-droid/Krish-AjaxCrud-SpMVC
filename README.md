@@ -1,7 +1,7 @@
 # Krish-AjaxCrud-SpMVC in 1 - no Api
 Krish-AjaxCrud-SpMVC
 1) Ajax Crud - AjaxController
-2) image Crud - EmployeeController.cs
+2) image Crud - EmployeeController.cs with dependent dropdown -> ManagerController
 3) SpCrud - SPController
 
 
