@@ -2,7 +2,9 @@
 Krish-AjaxCrud-SpMVC
 1) Ajax Crud - AjaxController
 2) image Crud - EmployeeController.cs with dependent dropdown -> ManagerController
-3) SpCrud - SPController
+--+++--  Table me List EmployeeController.cs
+ Inner Join  -- var data = db.employee.Include(x => x.mng).ToList();
+4) SpCrud - SPController
 
 
 \JanBatchCodeFirstApprochImpl-Krish\JanBatchCodeFirstApprochImpl\JanBatchCodeFirstApprochImpl\JanBatchCodeFirstApprochImpl.csproj
