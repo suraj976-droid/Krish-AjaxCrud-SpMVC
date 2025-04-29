@@ -1,4 +1,4 @@
-# Krish-AjaxCrud-SpMVC in 1 - no Api
+# Krish-AjaxCrud-SpMVC in 1 - no Api - no DI
 Krish-AjaxCrud-SpMVC
 1) Ajax Crud - AjaxController
 2) image Crud - EmployeeController.cs with Dropdown -> ManagerController -> 
