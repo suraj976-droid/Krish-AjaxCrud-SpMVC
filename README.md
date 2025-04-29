@@ -1,4 +1,4 @@
-# Krish-AjaxCrud-SpMVC
+# Krish-AjaxCrud-SpMVC in 1 - no Api
 Krish-AjaxCrud-SpMVC
 
 
