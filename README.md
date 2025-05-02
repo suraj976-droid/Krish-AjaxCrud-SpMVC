@@ -2,7 +2,7 @@
 Krish-AjaxCrud-SpMVC
 1) Ajax Crud - AjaxController
 2) image Crud - EmployeeController.cs with Dropdown -> ManagerController -> 
-|                         |
+|Simple                         |
  public IActionResult AddEmployee()
         {
             ViewBag.managers = new SelectList(db.manager,"Mid","Mname");
